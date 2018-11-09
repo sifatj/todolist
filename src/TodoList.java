@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TodoList {
-	List<TodoListItem> todoList = new ArrayList<>();
+	private final List<TodoListItem> todoList = new ArrayList<>();
 	
     /*
      * Add a new item to the list, given a description and priority.
@@ -67,4 +67,6 @@ public class TodoList {
         }
         return list;
     }
+    
+    
 }
