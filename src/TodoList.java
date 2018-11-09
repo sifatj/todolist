@@ -49,7 +49,6 @@ public class TodoList {
     		if(item.getPriority() > highestPriority.getPriority() && !item.isDone()) {
     			highestPriority = item;
     		}
-    		//return highestPriority;
     	}
         return highestPriority;
     }
