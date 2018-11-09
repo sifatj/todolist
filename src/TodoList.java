@@ -42,15 +42,24 @@ public class TodoList {
      * Find the highest-priority item which is not marked "done".
      * If all items are marked "done", this method returns null.
      */
+
+    
+    
     public TodoListItem findHighestPriorityNotDone() {
-        TodoListItem highestPriority = new TodoListItem(null, 0);
+	
+    	TodoListItem highestPriority = new TodoListItem(null, 0);
     	
-    	for(TodoListItem item: todoList) {
-    		if(item.getPriority() > highestPriority.getPriority() && !item.isDone()) {
-    			highestPriority = item;
-    		}
-    	}
-        return highestPriority;
+        for(TodoListItem item: todoList) {
+		    if(item.getPriority() > highestPriority.getPriority() && item.isDone() == false){
+	        	highestPriority = item;
+		    }
+        }   
+        if (highestPriority.getPriority() != 0){
+        	return highestPriority;
+        }
+        else {
+        	return null;
+        }
     }
     
     /*
